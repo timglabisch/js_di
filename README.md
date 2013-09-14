@@ -16,7 +16,7 @@ it's written in a few lines of coffeescript, but feel free to copy the javascrip
 # install
 just grab the di.coffee or .js.
 
-# licence
+# license
 New BSD License
 
 # examples
