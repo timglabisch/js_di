@@ -1,0 +1,22 @@
+{
+  "name": "js_di",
+  "description": "JS Dependency Injection Container",
+  "author": "Tim Glabisch",
+  "version": "1.0.0",
+  "preferGlobal": true,
+  "repository": "git://github.com/timglabisch/js_di.git",
+  "homepage": "https://github.com/timglabisch/js_di",
+  "license": "MIT",
+  "keywords": [
+    "dependency injection"
+  ],
+  "tags": [
+    "dependency injection"
+  ],
+  "dependencies": {
+    "karma-coffee-preprocessor": "~0.2.1",
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-chrome-launcher": "*"
+  }
+}
