@@ -2,7 +2,7 @@
   "name": "js_di",
   "description": "JS Dependency Injection Container",
   "author": "Tim Glabisch",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "preferGlobal": true,
   "repository": "git://github.com/timglabisch/js_di.git",
   "homepage": "https://github.com/timglabisch/js_di",
@@ -10,9 +10,13 @@
   "keywords": [
     "dependency injection"
   ],
+  "main": "di.coffee",
   "tags": [
     "dependency injection"
   ],
+  "dependencies": {
+    "coffee-script": "*"
+  },
   "devDependencies": {
     "karma-coffee-preprocessor": "0.2.x",
     "karma": "0.12.x",

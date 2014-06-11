@@ -42,8 +42,15 @@ class di
     argumentMap = whatever.toString().match(/^function\s*[^\(]*\(\s*([^\)]*)\)/)[1].replace(/\ /g, '').split(',')
     argumentMap = argumentMap.splice(0, argumentMap.length)
     argumentInstances = argumentMap.map (v) =>
-      argumentCallback = @get(v)
-      throw msg: "cant resolve argument", toresolve: whatever, service: v if typeof argumentCallback != "function"
+      argumentCallback = null
+
+      try
+        argumentCallback = @get(v)
+      catch
+        argumentCallback = @get(v.replace('_', ''))
+
+      if typeof argumentCallback != "function"
+        throw msg: "cant resolve argument", toresolve: whatever, service: v
       return argumentCallback()
 
     if whatever.name == "_Class"

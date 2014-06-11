@@ -28,3 +28,18 @@ describe 'basic', ->
     expect(d.get('c')().someFunction()).toBe "return value of a and return value of b"
 
 
+
+  it 'resolve reserved words', ->
+    c = class
+      constructor: (@package) ->
+      someFunction: -> @package
+
+    d = new di
+    d.configure
+      factories:
+        package: -> "some reserved word"
+        c: -> d.auto(c)
+
+    expect(d.get('c')().someFunction()).toBe "some reserved word"
+
+
